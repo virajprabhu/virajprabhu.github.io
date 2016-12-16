@@ -1,28 +1,135 @@
 ---
 layout: default
+tags: about
 ---
-{% assign posts_count = (paginator.posts | size) %}
 
-<div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in paginator.posts %}
-        <div class="post py3">
-          <p class="post-meta">{{ post.date | date: site.date_format }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <p class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </p>
-        </div>
-      {% endfor %}
-    </div>
+<img src="{{ site.baseurl }}/images/me.png" alt="Viraj Prabhu" width="240" style="float: right; padding: 20px; border-radius: 50%;" />
 
-    {% include pagination.html %}
-  {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h3>
-  {% endif %}
+<div style="text-align:justify">
+
+<p>My broad interests lie in computer vision and natural language processing, particularly in applying deep learning approaches to high level computer vision and multimodal learning tasks. I am interested in building machines that can emulate the remarkable human
+ability to combine sensory inputs to develop a semantic understanding of the natural world.</p>
+
+<p>Since August 2016, I'm a visiting student in the <a href="mlp.ece.vt.edu">Machine Learning and Perception lab</a> at Virginia Tech, working with <a href="https://filebox.ece.vt.edu/~dbatra/">Prof. Dhruv Batra</a> and <a href="https://computing.ece.vt.edu/~parikh/">Prof. Devi Parikh</a> on problems at the intersection of computer vision and natural language processing. Prior to this, I worked as a front-end developer at Adobe Systems India on Adobe Captivate Prime, a newly launched SAAS-based Learning Management System. </p>
+
+<p>I graduated with a Bachelor's in computer science from <a href="http://www.bits-pilani.ac.in/">BITS Pilani</a> in July 2015. Over the course of my undergraduation, I had the chance to work on several interesting projects in machine learning and computer vision. For a detailed list, please take a look at my <a href="cv/CV.pdf">CV</a>. </p>
+
+<p>I'm an AI enthusiast and find computer vision particularly fascinating, and enjoy building applications and working on challenging problems with real life utility. I also dabble in writing, music and quizzing.</p>
+
 </div>
+<hr/>
+<table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+    <tbody>
+    <tr>
+      <td width="25%">
+        <div class="one">
+            <div class="two" id="jump_image" style="opacity: 0;"></div>
+            <a href="https://www.vt.edu/">
+            <img src="images/vt.jpg" style="width:75%;">
+            </a>
+        </div>                
+          </td>
+          <td valign="top" width="75%">
+          <p>
+    	    Research Scholar, Machine Learning and Perception Lab, Fall 2016 - Present
+          </p>
+          <p>
+      	  <i>Advisors: Prof. Dhruv Batra and Prof. Devi Parikh</i>
+          </p>
+          <p>Working on deep learning approaches to <a href="http://visualqa.org/">Visual Question Answering</a>.<br/>
+          I am also a teaching assistant for <a href="https://computing.ece.vt.edu/~f16ece5424/">Intro to Machine Learning</a>, taught by Dr. Stefan Lee.</p>
+          <p></p>
+          </td>
+        </tr>
+	<tr>
+	  <td width="25%">
+	    <div class="one">
+      <a href="https://developers.google.com/open-source/gsoc/">
+        <img src="images/gsoc.png" style="width:75%;">
+      </a>
+	    </div>                
+	      </td>
+	      <td valign="top" width="75%">
+	      <p>
+	      <p>Mentor, <a href="http://cloudcv.org/">CloudCV</a>, Google Summer of Code '16, Apr-Aug 2016</p>
+        <p>Mentored and presently maintain the Google Summer of Code project CloudCV-IDE, a web platform
+        to build deep neural networks via a simple drag and drop interface. <a href="https://github.com/Cloud-CV/IDE">[GitHub]</a></p>
+	      </td>
+	</tr>
+ <tr>
+   <td width="25%">
+     <div class="one">
+     <div class="two" style="opacity: 0;"></div>
+     <a href="http://www.adobe.com/">
+     <img src="images/adobe.png" style="width:75%;">
+     </a>
+     </div>                
+   </td>
+   <td valign="top" width="75%">
+     <p>Member of Technical Staff, Adobe Systems India, Jul '15-Aug '16</p>
+     <p>Worked on the Android and front-end webapps of <a href="http://www.adobe.com/products/captivateprime.html">Adobe Captivate Prime</a>, a newly launched Learning Management System for enterprise.
+   </p></td>
+ </tr>
+ <tr>
+   <td width="25%">
+     <div class="one">
+     <div class="two" style="opacity: 0;"></div>
+     <a href="http://tonboimaging.com/tonbo/">
+     <img src="images/tonbo.png" style="width:75%;">
+     </a>
+     </div>                
+   </td>
+   <td valign="top" width="75%">
+     <p>R&D Intern, Tonbo Imaging, Jan-Jun '15</p>
+     <p><i>Computer vision startup developing sensor systems for battlefields and reconaissance.</i></p>
+     <p>Developed algorithm for automating camera calibration and implemented a boresighting algorithm for the company's video precision boresight tool.<a href="reports/autocalib.pdf">[Report]</a>
+     </p>
+   </p></td>
+ </tr>
+ <tr>
+   <td width="25%">
+     <div class="one">
+     <div class="two" style="opacity: 0;"></div>
+     <a href="http://www.adobe.com/">
+     <img src="images/adobe.png" style="width:75%;">
+     </a>
+     </div>
+   </td>
+   <td valign="top" width="75%">
+     <p>Summer Intern, Adobe Presenter Video Express, May '14-Aug '14</p>
+     <p>Developed a graphcut-based segmentation algorithm for real-time
+    background substitution in video that combined color, motion and shape cues and demonstrated robust
+    segmentation across various backgrounds.<a href="https://www.youtube.com/watch?v=wM9mpFxaOpM">[Demo]</a><a href="http://blogs.adobe.com/captivate/2016/03/adobe-presenter-video-express-the-end-of-green-screen.html">[Blog]</a><a href="reports/keyframecut.pdf">[Report]</a></p>
+   </td>
+ </tr>
+  <tr>
+   <td width="25%">
+     <div class="one">
+     <div class="two" style="opacity: 0;"></div>
+     <a href="http://www.orange-business.com/en">
+     <img src="images/obs.jpg" style="width:75%;">
+     </a>
+     </div>                
+   </td>
+   <td valign="top" width="75%">
+     <p>Summer Intern, May-Jul '13</p>
+     <p>Developed a web portal using the LAMP stack to automate customer data log creation for internal quality
+    assessment purposes.</p>
+   </td>
+ </tr>
+   <tr>
+   <td width="25%">
+     <div class="one">
+     <div class="two" style="opacity: 0;"></div>
+     <a href="http://www.bits-pilani.ac.in/">
+     <img src="images/bits.png" style="width:75%;">
+     </a>
+     </div>                
+   </td>
+   <td valign="top" width="75%">
+     <p>Birla Institute of Technology and Science (BITS), Pilani, Aug '11-Jul '15</p>
+     <p>Bachelor's Degree: Computer Science</p>
+   </td>
+ </tr>
+  </tbody>
+</table>
