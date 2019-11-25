@@ -2,69 +2,180 @@
 layout: default
 tags: about
 ---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+function readMore() {
+    $('#readMore').hide(); 
+    $('#more').show();
+}
+function readLess() {
+    $('#readMore').show(); 
+    $('#more').hide();
+}
+</script>
 
 <img src="{{ site.baseurl }}/images/me2.png" alt="Viraj Prabhu" width="240" style="float: right; padding: 20px; border-radius: 50%;" />
 
 <div class="bio" style="text-align:justify">
 
-<p>I am a Ph.D. in CS student at Georgia Tech.</p>
+<p>I am a 1st year CS Ph.D. student at Georgia Tech, advised by <a href="https://www.cc.gatech.edu/~judy/" class="uline">Prof. Judy Hoffman</a>. My research interests are in developing data-efficient and reliable computer vision systems that can be deployed in the real world. Specifically, I am interested in sample-efficient learning (particularly few-shot and active learning), efficient adaptation across visual tasks and domains, and reliable and calibrated uncertainty estimation from deep neural networks.</p>
 
-<p> I completed my M.S. in Computer Science (specializing in Machine Learning) at <a href="https://www.gatech.edu/" class="uline">Georgia Tech</a> in May 2019, where I was advised by <a href="https://www.cc.gatech.edu/~parikh/" class="uline">Prof. Devi Parikh</a> and also worked closely with <a href="https://www.cc.gatech.edu/~dbatra/index.html" class="uline">Prof. Dhruv Batra.</a></p>
+<p>I earned my Master's in CS (specializing in Machine Learning) in Spring '19, also at Georgia Tech, where I was advised by <a href="https://www.cc.gatech.edu/~parikh/" class="uline">Prof. Devi Parikh</a> (and worked closely with <a href="https://www.cc.gatech.edu/~dbatra/index.html" class="uline">Prof. Dhruv Batra</a>) on developing visual conversational agents.</p>
 
 <!-- <p>My broad research interests lie at the intersection of computer vision and natural language processing, particularly, in developing interactive multimodal AI agents that can be deployed in the real world. In the past, this has included research on equipping visual conversational agents with mechanisms for question relevance detection, studying the utility of various interpretability modalities proposed for such agents in the context of human-AI teams, and exploring human-in-the-loop evaluations of such agents.</p> -->
 
-<p>I've spent the last two summers as a research intern at <a href="https://www.curai.com/" class="uline">Curai</a>, a young machine learning-healthcare startup, where I worked on calibrating diagnostic models, and on automated dermatological diagnosis in a few-shot learning setup (mentored by <a href="https://scholar.google.com/citations?user=eoBHpj4AAAAJ&hl=en" class="uline">Anitha Kannan</a>). Prior to joining Georgia Tech, I spent a wonderful year as a research assistant in the <a href="https://mlp.ece.vt.edu/" class="uline">Machine Learning and Perception lab</a> at Virginia Tech, advised by <a href="https://www.cc.gatech.edu/~dbatra/index.html" class="uline">Prof. Dhruv Batra</a>. Previously, I worked as a software developer at <a href="https://www.adobe.com/in/" class="uline">Adobe Systems India</a> on <a href="http://www.adobe.com/products/captivateprime.html" class="uline">Adobe Captivate Prime</a>, a Learning Management System for enterprise.</p>
+<p>I've spent two wonderful summers doing research in machine learning for healthcare at <a href="https://www.curai.com/" class="uline">Curai</a>, where I worked on open-set learning for medical diagnosis, and on few-shot diagnosis of dermatological diseases (mentored by <a href="https://scholar.google.com/citations?user=eoBHpj4AAAAJ&hl=en" class="uline">Anitha Kannan</a>). Prior to joining Georgia Tech, I was a research assistant in the <a href="http://mlp.cc.gatech.edu/" class="uline">Machine Learning and Perception lab</a> at Virginia Tech, advised by <a href="https://www.cc.gatech.edu/~dbatra/index.html" class="uline">Prof. Dhruv Batra</a>. Before that, I worked as a software developer at <a href="https://www.adobe.com/in/" class="uline">Adobe</a>.<!-- on <a href="http://www.adobe.com/products/captivateprime.html" class="uline">Adobe Captivate Prime</a>, a Learning Management System for enterprise.</p>-->
 
-<p>I received my Bachelor's degree in Computer Science from <a href="http://www.bits-pilani.ac.in/" class="uline">BITS Pilani</a>. Over the course of my undergraduate studies, I was fortunate to undertake research internships at <a href="http://www.adobe.com/in/" class="uline">Adobe</a>, <a href="https://www.ceeri.res.in/" class="uline">CEERI Pilani</a>, and <a href="http://www.tonboimaging.com/" class="uline">Tonbo Imaging</a>, where I worked on problems ranging from video segmentation to automated camera calibration. For a detailed list, please take a look at my <a href="cv/CV.pdf" class="uline">CV</a>. </p>
+<p>I received my Bachelor's degree in Computer Science from <a href="http://www.bits-pilani.ac.in/" class="uline">BITS Pilani</a>. Over the course of my undergraduate studies, I was fortunate to undertake research internships at <a href="http://www.adobe.com/in/" class="uline">Adobe</a>, <a href="http://www.tonboimaging.com/" class="uline">Tonbo Imaging</a>, and <a href="https://www.ceeri.res.in/" class="uline">CEERI Pilani</a>, where I worked on problems ranging from video segmentation to camera calibration.</p>
 
-<p>On the side, I have been an open-source contributor to <a href="http://cloudcv.org/" class="uline">CloudCV</a> and served as mentor for Google Summer of Code (2016, 2017) and Google Code-In (2017) for the <a href="https://github.com/Cloud-CV/Fabrik" class="uline">Fabrik</a> project. I also enjoy running, soccer, reading, playing the guitar, and (occasionally) <a href="{{ site.baseurl }}/blog" class="uline">writing</a>.</p>
+<p>On the side, I have been an open-source contributor to <a href="http://cloudcv.org/" class="uline">CloudCV</a> and served as mentor for Google Summer of Code (2016, 2017) and Google Code-In (2017) for the <a href="https://github.com/Cloud-CV/Fabrik" class="uline">Fabrik</a> project. I've also won a couple of hackathons (<a href="https://vthacks-iv.devpost.com/submissions" class="uline">VTHacks '17</a>, BITS Google Hackathon '14). Apart from work, I enjoy running, soccer, reading, playing the guitar, and (occasionally) <a href="{{ site.baseurl }}/blog" class="uline">writing</a>.</p>
 
-<p>Feel free to reach out to me at <a href="mailto:virajp@gatech.edu" class="uline">virajp@gatech.edu</a>.</p>
+<p>My CV is available <a href="cv/CV.pdf" class="uline">here</a>. Feel free to reach out to me at <a href="mailto:virajp@gatech.edu" class="uline">virajp@gatech.edu</a>.</p>
 
+<br/>
+
+<div class="container">
+  <div class="row" style="text-align:center;">
+    <div class="col-sm-4">
+      <div class="row">
+        <div class="col-sm-6">
+          <a href="http://www.bits-pilani.ac.in/"><img src="images/bits.png" style="width:80%"></a> 
+        </div>
+        <div class="col-sm-6">
+          <a href="https://www.gatech.edu/"><img src="images/gt.jpg" style="width:80%"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="row" style="text-align:center;">
+        <div class="col-sm-3">
+          <a href="https://www.adobe.com/in/"><img src="images/adobe.png" style="width:80%"></a>
+        </div>
+        <div class="col-sm-3">
+          <a href="https://tonboimaging.com/"><img src="images/tonbo.png" style="width:70%"></a>
+        </div>
+        <div class="col-sm-3">
+          <a href="https://vt.edu/"><img src="images/vt.jpg" style="width:80%"></a>
+        </div>
+        <div class="col-sm-3">
+          <a href="http://curai.com/"><img src="images/curai.png" style="width:80%"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="text-align:center;">
+    <div class="col-sm-4">
+      <div class="row">
+        <div class="col-sm-6">
+          <div style="padding:10px"><h6>Fall 2011-Spring 2015</h6></div>
+        </div>
+        <div class="col-sm-6">
+          <div style="padding:10px"><h6>Fall 2017-current</h6></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="row" style="text-align:center;">
+        <div class="col-sm-3">
+          <div style="padding:10px"><h6>Summer 2014, Fall 2015- Summer 2016</h6></div>
+        </div>
+        <div class="col-sm-3">
+          <div style="padding:10px"><h6>Spring 2015</h6></div>
+        </div>
+        <div class="col-sm-3">
+          <div style="padding:10px"><h6>Fall 2016-Spring 2017</h6></div>
+        </div>
+        <div class="col-sm-3">
+          <div style="padding:10px"><h6>Summer 2018, 2019</h6></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+<!-- <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+  <tbody>
+
+  <tr>
+    <td width="20%">
+      <div class="one" style="width:20%;display:block;margin-left:auto;margin-right:auto;">
+          <div class="two" id="jump_image" style="opacity: 0;"></div>
+          <a href="http://www.bits-pilani.ac.in/">
+          <img src="images/bits.png">
+          </a>
+          <p align=center>BS in CS</p>
+          <p align=center>(2011-2015)</p>
+      </div>                
+    </td>
+    <td width="20%">
+      <div class="one" style="width:20%;display:block;margin-left:auto;margin-right:auto;">
+          <div class="two" id="jump_image" style="opacity: 0;"></div>
+          <a href="http://www.gatech.edu/">
+          <img src="images/gt.jpg">
+          </a>
+          <p align=center>MS in CS</p>
+          <p align=center>Ph.D. in CS (ongoing) </p>
+          
+      </div>                
+    </td>
+  </tr>
+</tbody>
+</table> -->
+<!-- </div> -->
+
 <hr/>
 <div class="news">
-<h1>News</h1>
+<h2>News</h2>
 <br/>
 <ul> 
   <li>
-    <p>[Mar 2019] Awarded the Georgia Tech College of Computing's <a href="https://www.cc.gatech.edu/awards" class="uline">MS Research award</a>.</p>
+    <p>[Oct '19] <a href='https://arxiv.org/abs/1910.02830' class='uline'>Open Set Medical Diagnosis</a> was accepted to the ML4H workshop at NeurIPS '19.</p>
     </p>
   </li>
   <li>
-    <p>[Aug 2018] Our paper <a href="https://arxiv.org/abs/1811.03066" class="uline-special">Prototypical Clustering Networks for Dermatological Disease Diagnosis</a> is out on arXiv!</p>
+    <p>[Sep '19] <a href='https://arxiv.org/abs/1810.11649' class='uline'>Fabrik: An Online Collaborative Neural Network Editor</a> will appear at the Workshop on AI Systems, SOSP '19.</p>
   </li>
   <li>
-    <p>[Aug 2018] Our paper <a href='https://arxiv.org/abs/1810.11649' class='uline'>Fabrik: An Online Collaborative Neural Network Editor</a> is out on arXiv!</p>
+    <p>[May '19] Completed my Master's degree!</p>
   </li>
   <li>
-    <p>[Aug 2018] Our paper <a href='https://arxiv.org/abs/1810.12366' class='uline'>Do Explanations make VQA Models more Predictable to a Human?</a>&nbsp; was accepted at EMNLP 2018.</p>
+    <p>[May '19] <a href="https://arxiv.org/abs/1811.03066" class="uline-special">Few-Shot Learning for Dermatological Disease Diagnosis</a> was accepted as a spotlight to MLHC 2019.</p>
   </li>
-  <!-- <li>
-    <p>[May 2018] I will spend the summer as a research intern at <a href="https://www.curai.com/" class="uline">Curai</a>, collaborating with <a href="https://scholar.google.com/citations?user=eoBHpj4AAAAJ&hl=en" class="uline">Anitha Kannan</a>.</p>
-  </li> -->
   <li>
-    <p>[Apr 2018] Just released our <a href="https://github.com/batra-mlp-lab/visdial-rl" class="uline">PyTorch implementation</a> of <a href="https://arxiv.org/abs/1703.06585" class="uline">Learning Cooperative Visual Dialog Agents with Deep Reinforcement Learning</a> on GitHub.</p>
+    <p>[Mar '19] Awarded the Georgia Tech College of Computing's <a href="https://www.cc.gatech.edu/awards" class="uline">MS Research award</a> (1 student annually).</p>
+    </p>
+  </li>    
+  <li>
+    <p>[Aug '18] <a href='https://arxiv.org/abs/1810.12366' class='uline'>Do Explanations make VQA Models more Predictable to a Human?</a>&nbsp; was accepted to EMNLP 2018.</p>
   </li>
   <li>
     <p>Reviewer for ICLR, CVPR, ECCV, NeurIPS (adjudged top-30% of reviewers) 2018.</p>
   </li>
+</ul>
+<a id="readMore" class="uline" href="#" onclick="readMore();return false;"><div style='text-align: center;'><h4>Read More</h4></div></a>
+<span id="more">
+<ul>
   <li>
-    <p>[Jul 2017] Presented a <a href="http://visualchatbot.cloudcv.org/" class="uline">demo on Visual Chatbots</a> at CVPR 2017.</p>
+    <p>[Apr '18] Just released our <a href="https://github.com/batra-mlp-lab/visdial-rl" class="uline">PyTorch implementation</a> of <a href="https://arxiv.org/abs/1703.06585" class="uline">Learning Cooperative Visual Dialog Agents with Deep Reinforcement Learning</a> on GitHub.</p>
+  </li>  
+  <li>
+    <p>[Jul '17] Presented a <a href="http://visualchatbot.cloudcv.org/" class="uline">demo on Visual Chatbots</a> at CVPR 2017.</p>
   </li>
   <li>
-    <p>[Jul 2017] Presented our paper <a href="https://arxiv.org/abs/1704.00717" class="uline">It Takes Two to Tango: Towards Theory of AI's Mind</a> at the <a href="http://chalearnlap.cvc.uab.es/" class="uline">Chalearn Looking at People Workshop</a> at CVPR 2017.</p>
+    <p>[Jul '17] Presented <a href="https://arxiv.org/abs/1704.00717" class="uline">It Takes Two to Tango: Towards Theory of AI's Mind</a> at the <a href="http://chalearnlap.cvc.uab.es/" class="uline">Chalearn Looking at People Workshop</a> at CVPR 2017.</p>
   </li>
   <li>
-    <p>[Jun 2017] Our paper <a href="https://arxiv.org/abs/1705.00601" class="uline">The Promise of Premise: Harnessing Question Premises in Visual Question Answering</a> was accepted at EMNLP 2017.</p>
+    <p>[Jun '17] <a href="https://arxiv.org/abs/1705.00601" class="uline">The Promise of Premise: Harnessing Question Premises in Visual Question Answering</a> was accepted at EMNLP 2017.</p>
   </li> 
   <li>
-    <p>[Jun 2017] Our paper <a href="https://arxiv.org/abs/1708.05122" class="uline">Evaluating Visual Conversational Agents via Cooperative Human-AI Games</a> was accepted at <a href="http://www.humancomputation.com/2017/" class="uline">HCOMP 2017</a>.</p>
+    <p>[Jun '17] <a href="https://arxiv.org/abs/1708.05122" class="uline">Evaluating Visual Conversational Agents via Cooperative Human-AI Games</a> was accepted at <a href="http://www.humancomputation.com/2017/" class="uline">HCOMP 2017</a>.</p>
   </li> 
   <!-- <li>
     <p>[May 2017] I represented <a href="http://cloudcv.org/">CloudCV</a> at the <a href="http://www.ldv.co/visionsummit/" class="uline">LDV Vision Summit</a> 2017 in NYC.</p>
   </li> -->
+  </span>
 </ul>
+<a id="readLess" class="uline" href="#" onclick="readLess();return false;"><div style='text-align: center;'><h4>Read Less</h4></div></a>
 </div>
 
 <!-- <hr>
@@ -97,60 +208,61 @@ tags: about
 
 <hr/>
 
-<div class="Publications">
-<h1><a name="research">Research</a></h1>
+<div id="research">
+<h2><a name="research">Publications</a></h2>
 <br/>
 
 <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
     <tbody>
     <tr>
       <td width="40%">
-        <div class="one">
-            <div class="two" id="jump_image" style="opacity: 0;"></div>
-            <img src="images/pn.png" style="max-height: 200px;width:100%;">
+        <div class="one" style="text-align:center;">
+            <!-- <div class="two" id="jump_image" style="opacity: 0;"></div> -->
+            <img src="images/osd.png" style="max-height: 200px;">
         </div>                
       </td>
       <td valign="middle" width="60%">
         <h5>
-        Prototypical Clustering Networks for Dermatological Disease Diagnosis
+        Open Set Medical Diagnosis
         </h5>
         <p>
-           <span style="color:red">(MLHC 2019)</span>
+           <a href="https://ml4health.github.io/2019/" class="uline-special"><span style="color:red">ML4H workshop at NeurIPS 2019</span></a>
          </p>
         <p class="authors">
-        <u>Viraj Prabhu</u>, Anitha Kannan, Murali Ravuri, Manish Chablani, Xavier Amatriain
+        <b>Viraj Prabhu</b>, Anitha Kannan, Geoffrey J. Tso, Namit Katariya, Manish Chablani, David Sontag, Xavier Amatriain
         </p>
-        <p><a href="https://arxiv.org/abs/1811.03066" class="uline-special">[Paper]</a></p>
+        <!-- <button type="button" class="btn btn-outline-dark btn-sm">Paper</button> -->
+        <a href="https://arxiv.org/abs/1910.02830" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+
+        <!-- <p><a href="https://arxiv.org/abs/1910.02830" class="uline-special">[Paper]</a></p> -->
       </td>
-    </tr>
+    </tr>   
     <tr>
       <td width="40%">
-        <div class="one">
-            <div class="two" id="jump_image" style="opacity: 0;"></div>
-            <img src="images/fabrik.png" style="max-height: 200px;width:100%">
+        <div class="one" style="text-align:center;">
+            <!-- <div class="two" id="jump_image" style="opacity: 0;"></div> -->
+            <img src="images/pcn.jpg" style="max-height: 150px;">
         </div>                
       </td>
-      <td valign="top" width="60%">
+      <td valign="middle" width="60%">
         <h5>
-        Fabrik: An Online Collaborative Neural Network Editor
+        Few-shot Learning for Dermatological Disease Diagnosis
         </h5>
         <p>
-           <span>(Preprint)</span>
-        </p>
+           <a href="https://www.mlforhc.org/2019-conference" class="uline-special"><span style="color:red">MLHC 2019 (spotlight)</span></a>, <a href="https://ml4health.github.io/2019/" class="uline-special"><span style="color:red">ML4H workshop at NeurIPS 2018</span></a>
+         </p>
         <p class="authors">
-        Utsav Garg, <u>Viraj Prabhu</u>, Deshraj Yadav, Ram Ramrakhya, Harsh Agrawal, Dhruv Batra 
+        <b>Viraj Prabhu</b>, Anitha Kannan, Murali Ravuri, Manish Chablani, David Sontag, Xavier Amatriain
         </p>
-        <p>
-          <a href="https://arxiv.org/abs/1810.11649" class="uline-special">[Paper]</a> 
-          <a href="https://github.com/Cloud-CV/Fabrik" class="uline-special">[Code]</a>
-      </p>
+        <a href="https://arxiv.org/abs/1811.03066" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+        <!-- <p><a href="https://arxiv.org/abs/1811.03066" class="uline-special">[Paper]</a></p> -->
       </td>
-    </tr>
+    </tr>    
     <tr>
       <td width="40%">
-        <div class="one">
-            <div class="two" id="jump_image" style="opacity: 0;"></div>
-            <img src="images/predictable.png" style="max-height: 200px;width:100%;">
+        <div class="one" style="text-align:center;">
+            <!-- <div class="two" id="jump_image" style="opacity: 0;"></div> -->
+            <img src="images/predictable.png" style="max-height: 200px;">
         </div>                
       </td>
       <td valign="bottom" width="60%">
@@ -158,35 +270,21 @@ tags: about
         Do Explanations make VQA Models more Predictable to a Human?
         </h5>
         <p>
-           <span style="color:red">(EMNLP 2018)</span>
+           <a href="https://emnlp2018.org/" class="uline-special"><span style="color:red">EMNLP 2018</span></a>, <a href="http://chalearnlap.cvc.uab.es/workshop/22/description/" class="uline-special"><span style="color:red">Chalearn Looking at People Workshop, CVPR 2017</span></a>
          </p>
         <p class="authors">
-        Arjun Chandrasekaran*, <u>Viraj Prabhu*</u>, Deshraj Yadav*, Prithvijit Chattopadhyay*, Devi Parikh<br/>
-        (* equal contribution)
+        Arjun Chandrasekaran*, <b>Viraj Prabhu*</b>, Deshraj Yadav*, Prithvijit Chattopadhyay*, Devi Parikh<br/>
+        (* = equal contribution)
         </p>
-        <p><a href="https://arxiv.org/abs/1810.12366" class="uline-special">[Paper]</a></p>
+        <a href="https://arxiv.org/abs/1810.12366" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+        <!-- <p><a href="https://arxiv.org/abs/1810.12366" class="uline-special">[Paper]</a></p> -->
       </td>
     </tr>
     <tr>
       <td width="40%">
-        <div class="one">
-            <div class="two" id="jump_image" style="opacity: 0;"></div>
-            <img src="images/visdial_rl.jpg" style="margin-top:30px;max-height: 200px;width:100%;">
-        </div>                
-      </td>
-      <td valign="top" width="60%">
-        <h5>PyTorch implementation of <a href="https://arxiv.org/abs/1703.06585" class="uline">Learning Cooperative Visual Dialog Agents with Deep Reinforcement Learning</a></h5>
-        <p class="authors">
-        Nirbhay Modhe, <u>Viraj Prabhu</u>, Michael Cogswell, Satwik Kottur, Abhishek Das, Stefan Lee, Devi Parikh, Dhruv Batra
-        </p>
-        <p><a href="https://github.com/batra-mlp-lab/visdial-rl" class="uline">[Code]</a>
-      </td>
-    </tr>
-    <tr>
-      <td width="40%">
-        <div class="one">
-            <div class="two" id="jump_image" style="opacity: 0;"></div>
-            <img src="images/premise.png" style="max-height: 200px;width:100%;">
+        <div class="one" style="text-align:center;">
+            <!-- <div class="two" id="jump_image" style="opacity: 0;"></div> -->
+            <img src="images/premise.png" style="max-height: 200px;">
         </div>                
       </td>
       <td valign="top" width="60%">
@@ -194,19 +292,22 @@ tags: about
         The Promise of Premise: Harnessing Question Premises in Visual Question Answering
         </h5>
         <p>
-          <span style="color:red">(EMNLP 2017)</span>
+          <a href="https://www.aclweb.org/anthology/events/emnlp-2017/" class="uline-special"><span style="color:red">EMNLP 2017</span></a>
         </p>
         <p class="authors">
-        Aroma Mahendru*, <u>Viraj Prabhu*</u>, Akrit Mohapatra*, Dhruv Batra, Stefan Lee<br/>
+        Aroma Mahendru*, <b>Viraj Prabhu*</b>, Akrit Mohapatra*, Dhruv Batra, Stefan Lee<br/>
         (* equal contribution)
         </p>
-        <p><a href="https://arxiv.org/abs/1705.00601" class="uline-special">[Paper]</a> <a href="https://bitbucket.org/akrit_vt/premise_emnlp17" class="uline-special">[Code]</a> <a href="https://virajprabhu.github.io/qpremise/dataset/" class="uline-special">[Dataset]</a></p>
+        <a href="https://arxiv.org/abs/1705.00601" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+        <a href="https://bitbucket.org/akrit_vt/premise_emnlp17" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Code</a>
+        <a href="https://virajprabhu.github.io/qpremise/dataset/" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Dataset</a>
+        <!-- <p><a href="https://arxiv.org/abs/1705.00601" class="uline-special">[Paper]</a> <a href="https://bitbucket.org/akrit_vt/premise_emnlp17" class="uline-special">[Code]</a> <a href="https://virajprabhu.github.io/qpremise/dataset/" class="uline-special">[Dataset]</a></p> -->
       </td>
     </tr>
     <tr>
       <td width="40%">
-        <div class="one">
-            <div class="two" id="jump_image" style="opacity: 0;"></div>
+        <div class="one" style="text-align:center;">
+            <!-- <div class="two" id="jump_image" style="opacity: 0;"></div> -->
             <img src="images/hcomp.png" style="display:block;margin:auto;margin-top:-30px;max-height: 200px;">
         </div>                
       </td>
@@ -215,16 +316,17 @@ tags: about
         Evaluating Visual Conversational Agents via Cooperative Human-AI Games
         </h5>
         <p>
-          <span style="color:red">(HCOMP 2017)</span>
+          <a href="https://www.humancomputation.com/2017/" class="uline-special"><span style="color:red">HCOMP 2017</span></a>
         </p>
         <p class="authors">
-        Prithvijit Chattopadhyay*, Deshraj Yadav*, <u>Viraj Prabhu</u>, Arjun Chandrasekaran, Abhishek Das, Stefan Lee, Dhruv Batra, Devi Parikh
+        Prithvijit Chattopadhyay*, Deshraj Yadav*, <b>Viraj Prabhu</b>, Arjun Chandrasekaran, Abhishek Das, Stefan Lee, Dhruv Batra, Devi Parikh
         </p>
-        <p><a href="https://arxiv.org/abs/1708.05122" class="uline-special">[Paper]</a> <a href="https://github.com/GT-Vision-Lab/GuessWhich" class="uline-special">[Code]</a></p>
+        <a href="https://arxiv.org/abs/1708.05122" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+        <a href="https://github.com/GT-Vision-Lab/GuessWhich" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Code</a>
+        <!-- <p><a href="https://arxiv.org/abs/1708.05122" class="uline-special">[Paper]</a> <a href="https://github.com/GT-Vision-Lab/GuessWhich" class="uline-special">[Code]</a></p> -->
       </td>
     </tr>
-
-    <tr>
+   <!--  <tr>
       <td width="40%">
         <div class="one">
             <div class="two" id="jump_image" style="opacity: 0;"></div>
@@ -245,56 +347,130 @@ tags: about
         <p><a href="https://arxiv.org/abs/1704.00717" class="uline-special">[Paper]</a> <a href="http://deshraj.xyz/TOAIM/" class="uline">[Demo]</a> <a href="https://github.com/deshraj/TOAIM" class="uline">[Code]</a></p>
       </td>
     </tr>
-
+ -->
   </tbody>
 </table>
 </div>
 
 <hr>
 
-<!-- <div class="projects">
-<h1>Selected Projects</h1>
+<div id="projects">
+<h2>Projects</h2>
 <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
     <tbody>
-    <tr>
-      <td width="25%">
-        <div class="one">
+      <tr>
+        <td valign="top" width="50%">
+        <h5>
+        Fabrik: An Online Collaborative Neural Network Editor
+        </h5>
+        <!-- <p> -->
+           <!-- <span>Tech Report</span> -->
+        <!-- </p> -->
+        <p class="authors">
+        Utsav Garg, <b>Viraj Prabhu</b>, Deshraj Yadav, Ram Ramrakhya, Harsh Agrawal, Dhruv Batra 
+        </p>
+        <p class="authors">Lead mentor on Fabrik, an open-source web platform to collaboratively build, visualize, and design neural networks in the browser.</p>
+        <a href="https://arxiv.org/abs/1810.11649" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Report</a>
+        <a href="https://github.com/Cloud-CV/Fabrik" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Code</a>
+        <!-- <p>
+          <a href="https://arxiv.org/abs/1810.11649" class="uline-special">[Paper]</a> 
+          <a href="https://github.com/Cloud-CV/Fabrik" class="uline-special">[Code]</a>
+      </p> -->
+      </td>
+      <td width="50%">
+        <div class="one" style="text-align:center;">
             <div class="two" id="jump_image" style="opacity: 0;"></div>
-            <a href="http://www.ceeri.res.in/">
-            <img src="images/ceeri.jpg" style="width:75%;">
-            </a>
+            <img src="images/fabrik.png" style="max-height: 150px;width:100%">
         </div>                
-          </td>
-          <td valign="top" width="75%">
-          <p>
-          
-          </p>
-          </td>
-        </tr>
-
-    <tr>
-      <td width="25%">
-        <div class="one">
+      </td>
+    </tr>
+    <!-- <tr>
+      <td valign="top" width="75%">
+        <h5>Mentor, <a href="http://cloudcv.org/">CloudCV</a>, Google Summer of Code 2016, 2017, and Google Code-In 2017</h5>
+        <p>Mentored and presently help maintain the Google Summer of Code project Fabrik, a web platform
+        to collaboratively design, edit, and share deep neural networks from within a browser. <a href="https://github.com/Cloud-CV/IDE" class="uline">[GitHub]</a></p>
+        </td>
+        <td width="25%">
+      <div class="one">
+      <a href="https://developers.google.com/open-source/gsoc/">
+        <img src="images/gsoc.png" style="width:75%;">
+      </a>
+      </div>                
+        </td>
+  </tr> -->
+    <tr>      
+      <td valign="top" width="40%">
+        <h5>PyTorch implementation of <a href="https://arxiv.org/abs/1703.06585" class="uline">Learning Cooperative Visual Dialog Agents with Deep Reinforcement Learning</a></h5>
+        <p class="authors">
+        Nirbhay Modhe, <b>Viraj Prabhu</b>, Michael Cogswell, Satwik Kottur, Abhishek Das, Stefan Lee, Devi Parikh, Dhruv Batra
+        </p>
+        <a href="https://github.com/batra-mlp-lab/visdial-rl" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Code</a>
+        <!-- <p><a href="https://github.com/batra-mlp-lab/visdial-rl" class="uline">[Code]</a> -->
+      </td>
+      <td width="50%">
+        <div class="one" style="text-align:center;">
             <div class="two" id="jump_image" style="opacity: 0;"></div>
-            <a href="http://www.ceeri.res.in/">
-            <img src="images/ceeri.jpg" style="width:75%;">
-            </a>
+            <img src="images/visdial_rl.jpg" style="margin-top:30px;max-height: 200px;width:100%;">
         </div>                
-          </td>
-          <td valign="top" width="75%">
-          <p>
-          PyTorch Implementation of <u>Learning Cooperative Visual Dialog Agents via Deep Reinforcement Learning</u>, ICCV
-          2017.
-          </p>
-          </td>
-        </tr>
+      </td>
+    </tr>
+   <td valign="top" width="75%">
+    <h5>Adobe Captivate Prime</h5>
+    <p class="authors">During my time as a software developer at Adobe (Aug '15-'16), I was responsible for the <a href="http://www.adobe.com/products/captivateprime.html" class="uline">Captivate Prime</a> Android app through two release cycles. I developed features for offline content play-back, syncing, and UI.
+    </p>
+   </td>
+   <td width="25%">
+     <div class="one" style="text-align:center;">
+     <div class="two" style="opacity: 0;"></div>
+     <!-- <a href="http://www.adobe.com/"> -->
+     <img src="images/cp.jpeg" style="width:50%;">
+     <!-- </a> -->
+     </div>                
+   </td>
+ </tr>
+ <tr>
+   <td valign="top" width="75%">
+     <h5>Automated camera calibration and boresighting</h5>
+     <!-- <p><i>Computer vision startup developing sensor systems for battlefields and reconaissance.</i></p> -->
+     <p class="authors">Over a research internship at <a href="http://tonboimaging.com/" class="uline">Tonbo Imaging</a> (Spring '15), I designed an algorithm for automated camera calibration and implemented a boresighting algorithm for the company's video precision boresight tool.
+     <!-- <a href="reports/autocalib.pdf" class="uline">[Report]</a> -->
+     </p>
+   </p></td>
+   <td width="25%">
+     <div class="one" style="text-align:center;">
+     <div class="two" style="opacity: 0;"></div>
+     <!-- <a href="http://tonboimaging.com/tonbo/"> -->
+     <img src="images/tonbo.png" style="width:50%;">
+     <!-- </a> -->
+     </div>                
+   </td>
+ </tr>
+    <tr>
+     <td valign="top" width="75%">
+       <h5>KeyframeCut</h5>
+       <p class="authors">Over an internship at Adobe, I co-developed KeyframeCut, a fast graphcut-based segmentation algorithm for real-time background substitution in video. Transferred into Magic Green Screen, the marquee feature of Adobe Presenter Video Express 11.</p>
+       <a href="https://www.youtube.com/watch?v=wM9mpFxaOpM" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Demo</a>
+       <a href="http://blogs.adobe.com/captivate/2016/03/adobe-presenter-video-express-the-end-of-green-screen.html" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Blog</a>
+       <!-- <p><a href="https://www.youtube.com/watch?v=wM9mpFxaOpM" class="uline">[Demo]</a> <a href="http://blogs.adobe.com/captivate/2016/03/adobe-presenter-video-express-the-end-of-green-screen.html" class="uline">[Blog]</a> -->
+      <!-- <a href="reports/keyframecut.pdf" class="uline">[Report]</a> -->
+    </p>
+     </td>
+     <td width="25%">
+       <div class="one" style="text-align:center;">
+       <div class="two" style="opacity: 0;"></div>
+       <!-- <a href="http://www.adobe.com/"> -->
+       <img src="images/mgs.png" style="width:75%;">
+       <!-- </a> -->
+       </div>
+     </td>
+   </tr>
   </tbody>
 </table>
-</div> -->
+</div>
 
 <!-- <hr> -->
 <!-- <hr/> -->
-<div class="experience">
+<!-- <div class="experience">
 <h1><a name="experience">Experience</a></h1>
 <br/>
 <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
@@ -379,7 +555,6 @@ tags: about
      <h5>R&D Intern, Tonbo Imaging (Spring 2015)</h5>
      <p><i>Computer vision startup developing sensor systems for battlefields and reconaissance.</i></p>
      <p>Designed algorithm for automated camera calibration and implemented a boresighting algorithm for the company's video precision <a href="http://tonboimaging.com/india/products-2/vehicle-vision-systems/brs-640c/" class="uline">boresight tool</a>.
-     <!-- <a href="reports/autocalib.pdf" class="uline">[Report]</a> -->
      </p>
    </p></td>
    <td width="25%">
@@ -396,7 +571,6 @@ tags: about
      <h5>Research Intern, Adobe Presenter Video Express (PVX) (Summer 2014)</h5>
      <p>Developed fast graphcut-based segmentation algorithm for real-time background substitution in video. Transferred
     into Magic Green Screen, the marquee feature of PVX 11.<a href="https://www.youtube.com/watch?v=wM9mpFxaOpM" class="uline">[Demo]</a> <a href="http://blogs.adobe.com/captivate/2016/03/adobe-presenter-video-express-the-end-of-green-screen.html" class="uline">[Blog]</a>
-    <!-- <a href="reports/keyframecut.pdf" class="uline">[Report]</a> -->
   </p>
    </td>
    <td width="25%">
@@ -423,53 +597,8 @@ tags: about
      </div>                
    </td>
  </tr>
-   <!-- <tr>
-   <td valign="top" width="75%">
-     <h5>B.E. in Computer Science, Birla Institute of Technology and Science (BITS), Pilani (2011-2015)</h5>
-     <p>Bachelor's Degree in Computer Science, with a focus in AI, including courses in Pattern Recognition, Machine Learning, Information Retrieval, and Parallel Computing.</p>
-   </td>
-   <td width="25%">
-     <div class="one">
-     <div class="two" style="opacity: 0;"></div>
-     <a href="http://www.bits-pilani.ac.in/">
-     <img src="images/bits.png" style="width:75%;">
-     </a>
-     </div>                
-   </td>
- </tr> -->
   </tbody>
 </table>
-</div>
-<hr>
+</div> -->
 
-<div class="education">
-<h1><a name="education">Education</a></h1>
-<br/>
-<table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-  <tbody>
-  <tr>
-    <td width="50%">
-      <div class="one" style="width:45%;display:block;margin-left:auto;margin-right:auto;">
-          <div class="two" id="jump_image" style="opacity: 0;"></div>
-          <a href="http://www.bits-pilani.ac.in/">
-          <img src="images/bits.png">
-          </a>
-          <p align=center>BE Computer Science </p>
-          <p align=center>(2011-2015)</p>
-      </div>                
-    </td>
-    <td width="50%">
-      <div class="one" style="width:45%;display:block;margin-left:auto;margin-right:auto;">
-          <div class="two" id="jump_image" style="opacity: 0;"></div>
-          <a href="http://www.gatech.edu/">
-          <img src="images/gt.jpg">
-          </a>
-          <p align=center>MS Computer Science </p>
-          <p align=center>(2017-2019)</p>
-          
-      </div>                
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
+<hr>
