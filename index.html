@@ -18,9 +18,9 @@ function readLess() {
 
 <div class="bio" style="text-align:justify">
 
-<p>I am a 1st year CS Ph.D. student at Georgia Tech, advised by <a href="https://www.cc.gatech.edu/~judy/" class="uline">Prof. Judy Hoffman</a>. My research interests are in developing data-efficient and reliable computer vision systems that can be deployed in the real world. Specifically, I am interested in sample-efficient learning (particularly few-shot and active learning), efficient adaptation across visual tasks and domains, and reliable and calibrated uncertainty estimation from deep neural networks.</p>
+<p>I am a 2nd year CS Ph.D. student at Georgia Tech, advised by <a href="https://www.cc.gatech.edu/~judy/" class="uline">Prof. Judy Hoffman</a>. My research interests are in developing data-efficient and reliable computer vision systems that can be deployed in the real world. Specifically, I am interested in sample-efficient learning (particularly <a href="http://proceedings.mlr.press/v106/prabhu19a.html" class="uline">few-shot</a> and <a href="https://virajprabhu.github.io/adaclue-web/" class="uline">active learning</a>), <a href="https://virajprabhu.github.io/sentry-web/" class="uline">adaptation</a> across visual tasks and domains, and <a href="https://arxiv.org/abs/1910.02830" class="uline">reliable</a> and calibrated uncertainty estimation from deep neural networks.</p>
 
-<p>I earned my Master's in CS (specializing in Machine Learning) in Spring '19, also at Georgia Tech, where I was advised by <a href="https://www.cc.gatech.edu/~parikh/" class="uline">Prof. Devi Parikh</a> (and worked closely with <a href="https://www.cc.gatech.edu/~dbatra/index.html" class="uline">Prof. Dhruv Batra</a>) on developing visual conversational agents.</p>
+<p>I earned my Master's in CS (specializing in Machine Learning) in Spring '19, also at Georgia Tech, where I was advised by <a href="https://www.cc.gatech.edu/~parikh/" class="uline">Prof. Devi Parikh</a> (and worked closely with <a href="https://www.cc.gatech.edu/~dbatra/index.html" class="uline">Prof. Dhruv Batra</a>) on developing <a href="https://virajprabhu.github.io/qpremise/" class="uline">visual</a> <a href="https://www.aclweb.org/anthology/D18-1128.pdf" class="uline">conversational</a> <a href="https://arxiv.org/abs/1708.05122" class="uline">agents</a>.</p>
 
 <!-- <p>My broad research interests lie at the intersection of computer vision and natural language processing, particularly, in developing interactive multimodal AI agents that can be deployed in the real world. In the past, this has included research on equipping visual conversational agents with mechanisms for question relevance detection, studying the utility of various interpretability modalities proposed for such agents in the context of human-AI teams, and exploring human-in-the-loop evaluations of such agents.</p> -->
 
@@ -129,6 +129,14 @@ function readLess() {
 <br/>
 <ul> 
   <li>
+    <p>[Dec '20] Preprint on <a href='https://arxiv.org/abs/1910.02830' class='uline'>Selective Entropy Optimization via Committee Consistency for Unsupervised DA </a> is out on arXiv.</p>
+    </p>
+  </li>
+  <li>
+    <p>[Oct '20] Preprint on <a href='https://arxiv.org/abs/2010.08666' class='uline'>Active Domain Adaptation via Clustering Uncertainty-weighted Embeddings</a> is out on arXiv.</p>
+    </p>
+  </li>
+  <li>
     <p>[Oct '19] <a href='https://arxiv.org/abs/1910.02830' class='uline'>Open Set Medical Diagnosis</a> was accepted to the ML4H workshop at NeurIPS '19.</p>
     </p>
   </li>
@@ -142,19 +150,19 @@ function readLess() {
     <p>[May '19] <a href="https://arxiv.org/abs/1811.03066" class="uline-special">Few-Shot Learning for Dermatological Disease Diagnosis</a> was accepted as a spotlight to MLHC 2019.</p>
   </li>
   <li>
-    <p>[Mar '19] Awarded the Georgia Tech College of Computing's <a href="https://www.cc.gatech.edu/awards" class="uline">MS Research award</a> (1 student annually).</p>
+    <p>[Mar '19] Awarded the Georgia Tech College of Computing's <a href="https://www.cc.gatech.edu/content/annual-awards-and-honors-past-recipients" class="uline">MS Research award</a> (1 student annually).</p>
     </p>
   </li>    
+  </ul>
+<a id="readMore" class="uline" href="#" onclick="readMore();return false;"><div style='text-align: center;'><h4>Read More</h4></div></a>
+<span id="more">
+<ul>
   <li>
-    <p>[Aug '18] <a href='https://arxiv.org/abs/1810.12366' class='uline'>Do Explanations make VQA Models more Predictable to a Human?</a>&nbsp; was accepted to EMNLP 2018.</p>
+    <p>[Aug '18] <a href='https://www.aclweb.org/anthology/D18-1128.pdf' class='uline'>Do Explanations make VQA Models more Predictable to a Human?</a>&nbsp; was accepted to EMNLP 2018.</p>
   </li>
   <li>
     <p>Reviewer for ICLR, CVPR, ECCV, NeurIPS (adjudged top-30% of reviewers) 2018.</p>
   </li>
-</ul>
-<a id="readMore" class="uline" href="#" onclick="readMore();return false;"><div style='text-align: center;'><h4>Read More</h4></div></a>
-<span id="more">
-<ul>
   <li>
     <p>[Apr '18] Just released our <a href="https://github.com/batra-mlp-lab/visdial-rl" class="uline">PyTorch implementation</a> of <a href="https://arxiv.org/abs/1703.06585" class="uline">Learning Cooperative Visual Dialog Agents with Deep Reinforcement Learning</a> on GitHub.</p>
   </li>  
@@ -214,6 +222,53 @@ function readLess() {
 
 <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
     <tbody>
+          <tr>
+      <td width="40%">
+        <div class="one" style="text-align:center;">
+            <!-- <div class="two" id="jump_image" style="opacity: 0;"></div> -->
+            <img src="images/teaser_sentry.png" style="max-height: 200px;">
+        </div>                
+      </td>
+      <td valign="middle" width="60%">
+        <h5>
+        Selective Entropy Optimization via Committee Consistency for Unsupervised Domain Adaptation
+        </h5>
+<!--         <p>
+           <a href="https://ml4health.github.io/2019/" class="uline-special"><span style="color:red">ML4H workshop at NeurIPS 2019</span></a>
+        </p> -->
+        <p class="authors">
+        <b>Viraj Prabhu</b>, Shivam Khare, Deeksha Kartik, Judy Hoffman
+        </p>
+        <!-- <button type="button" class="btn btn-outline-dark btn-sm">Paper</button> -->
+        <a href="https://arxiv.org/abs/2010.08666" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+        <a href="https://virajprabhu.github.io/sentry-web/" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Project Page</a>
+        <a href="https://github.com/virajprabhu/SENTRY" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Code</a>
+        <!-- <p><a href="https://arxiv.org/abs/1910.02830" class="uline-special">[Paper]</a></p> -->
+      </td>
+    </tr>
+      <tr>
+      <td width="40%">
+        <div class="one" style="text-align:center;">
+            <!-- <div class="two" id="jump_image" style="opacity: 0;"></div> -->
+            <img src="images/teaser_toy.png" style="max-height: 200px;">
+        </div>                
+      </td>
+      <td valign="middle" width="60%">
+        <h5>
+        Active Domain Adaptation via Clustering Uncertainty-weighted Embeddings
+        </h5>
+<!--         <p>
+           <a href="https://ml4health.github.io/2019/" class="uline-special"><span style="color:red">ML4H workshop at NeurIPS 2019</span></a>
+        </p> -->
+        <p class="authors">
+        <b>Viraj Prabhu</b>, Arjun Chandrasekaran, Kate Saenko, Judy Hoffman
+        </p>
+        <!-- <button type="button" class="btn btn-outline-dark btn-sm">Paper</button> -->
+        <a href="https://arxiv.org/abs/2010.08666" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+        <a href="https://virajprabhu.github.io/adaclue-web/" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Project Page</a>
+        <!-- <p><a href="https://arxiv.org/abs/1910.02830" class="uline-special">[Paper]</a></p> -->
+      </td>
+    </tr>
     <tr>
       <td width="40%">
         <div class="one" style="text-align:center;">
@@ -236,7 +291,7 @@ function readLess() {
 
         <!-- <p><a href="https://arxiv.org/abs/1910.02830" class="uline-special">[Paper]</a></p> -->
       </td>
-    </tr>   
+    </tr>
     <tr>
       <td width="40%">
         <div class="one" style="text-align:center;">
@@ -276,7 +331,7 @@ function readLess() {
         Arjun Chandrasekaran*, <b>Viraj Prabhu*</b>, Deshraj Yadav*, Prithvijit Chattopadhyay*, Devi Parikh<br/>
         (* = equal contribution)
         </p>
-        <a href="https://arxiv.org/abs/1810.12366" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
+        <a href="https://www.aclweb.org/anthology/D18-1128.pdf" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Paper</a>
         <!-- <p><a href="https://arxiv.org/abs/1810.12366" class="uline-special">[Paper]</a></p> -->
       </td>
     </tr>

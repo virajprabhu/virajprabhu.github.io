@@ -1,5 +1,5 @@
 // Typography
-$base-font-size: 10px;
+$base-font-size: 12px;
 $base-font-weight: 400;
 $bold-font-weight: bold !default;
 $font-family: 'Lato', 'Verdana', Georgia, 'Times New Roman', serif !default;
@@ -11,7 +11,7 @@ $monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
 $h1: 2rem !default;
 $h2: 1.5rem !default;
 $h3: 1.4rem !default;
-$h4: 0.75rem !default;
+$h4: 0.85rem !default;
 $h5: .875rem !default;
 $h6: .6rem !default;
 $h00: 4rem !default;
@@ -25,7 +25,7 @@ $h1-responsive-max: 3.84rem !default;
 $abbr-border-bottom: 1px black dotted;
 
 // Page width
-$measure-width: 40em !default;
+$measure-width: 45em !default;
 
 // Viewport widths
 $viewport-small: 32em;
