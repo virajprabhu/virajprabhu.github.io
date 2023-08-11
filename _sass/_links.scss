@@ -5,7 +5,8 @@ a {
 }
 
 a.uline {
-  border-bottom: 1px solid #ccc;
+  // border-bottom: 1px solid #ccc;
+  color: #0076df;
 }
 
 a.uline-special {
@@ -52,8 +53,8 @@ button,
     text-shadow: none;
     background-image: none;
 }
-
-.btn:hover {
-  color: #fff !important;
-  text-decoration: none;
+.btn{
+  border: 1px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 0;
 }
