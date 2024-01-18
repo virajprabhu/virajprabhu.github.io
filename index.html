@@ -18,12 +18,12 @@ tags: about
 
 <div class="bio">
   <!-- <hr/> -->
-  <p>I am a final year CS Ph.D. student at Georgia Tech, advised by <a href="https://www.cc.gatech.edu/~judy/"
-      class="uline">Judy Hoffman</a>. I'm interested in making deep visual models generalize across the infinite visual variation in the world: across viewpoints, time, space, and curation. My research has focused on improving such generalization at different stages of the ML lifecycle: <i>proactive</i> strategies that <a href="https://arxiv.org/abs/2302.04832" class="uline">leverage simulation</a> to augment the long-tail of real training data, as well as <i>reactive</i> strategies based on <a
+  <p>I am a research scientist at <a href="https://www.salesforceairesearch.com/" class="uline">Salesforce AI</a>, where I work on developing techniques for reliable image understanding and generation. I received my PhD in Computer Science from Georgia Tech in December 2023, where I was advised by <a href="https://www.cc.gatech.edu/~judy/"
+      class="uline">Judy Hoffman</a>. The focus of my PhD was on making deep visual models generalize across the infinite visual variation in the world -- across viewpoints, time, space, and curation -- and proposed methods to improve such generalization at different stages of the ML lifecycle: <i>proactive</i> strategies in improving robustness by <a href="https://arxiv.org/abs/2302.04832" class="uline">leveraging simulation</a> and <a href="https://virajprabhu.github.io/lance-web/" class="uline">multimodal foundation models</a>, as well as <i>reactive</i> strategies that leverage <a
       href="https://virajprabhu.github.io/adaclue-web/" class="uline">active learning</a> and <a
       href="https://virajprabhu.github.io/sentry-web/" class="uline">domain</a> <a href="https://openreview.net/forum?id=OjS3nkNATOw" class="uline">adaptation</a> to recover from unforeseen <a
       href="https://ieeexplore.ieee.org/document/9856652" class="uline">spatio</a>-<a
-      href="https://openreview.net/forum?id=tOCxfUebrlz" class="uline">temporal</a> distribution shifts. Of late, I have focused on stress-testing visual models for deployment by leveraging foundation models for text and image synthesis to generate <a href="https://virajprabhu.github.io/lance-web/" class="uline">language-guided counterfactual images</a>. My research has spanned diverse applications ranging from <a href="https://arxiv.org/abs/2302.04832" class="uline">autonomous driving</a> to <a href="https://arxiv.org/abs/1811.03066" class="uline">medical diagnosis</a> and <a href="https://arxiv.org/abs/2306.04482" class="uline">algorithmic fairness</a>.
+      href="https://openreview.net/forum?id=tOCxfUebrlz" class="uline">temporal</a> distribution shifts.
 
   <p>I earned my Master's in CS (awarded the <a
       href="https://www.cc.gatech.edu/content/annual-awards-and-honors-past-recipients" class="uline">MS Research
@@ -185,22 +185,67 @@ tags: about
 
   <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
     <tbody>
-      <!-- <tr>
+      <tr>
         <tr valign="middle" width="100%">
           <h4 style="font-weight: 500;">
             We're Not Using Videos Effectively: An Updated Video Domain Adaptation Baseline
           </h4>
+          <p>
+            <a href="https://jmlr.org/tmlr/index.html"><span style="color:#9A2617; font-weight:500">TMLR 2024</span></a>
+          </p>
           <p class="authors">
             Simar Kareer, Vivek Vijaykumar, Harsh Maheshwari, Judy Hoffman, Prithvijit Chattopadhyay, Viraj Prabhu
             <br />
           </p>
-        </tr> -->
-        <!-- <tr width="100%">
+        </tr>
+        <tr width="100%">
+          <div class="one" style="text-align:center;">
+            <img src="images/vda.png" style="max-height: 200px;">
+          </div>
+        </tr>
+      </tr>
+      <hr>
+      <tr>
+        <tr valign="middle" width="100%">
+          <h4 style="font-weight: 500;">
+            Translating Labels to Solve Annotation Mismatches Across Object Detection Datasets
+          </h4>
+          <p>
+          <a href="https://iclr.cc/Conferences/2024/Dates"><span style="color:#9A2617; font-weight:500">ICLR 2024</span>
+          </p>
+            <p class="authors">          
+            Yuan-Hong Liao, David Acuna, Rafid Mahmood, James Lucas, Viraj Prabhu, Sanja Fidler
+            <br />
+          </p>
+        </tr>
+        <tr width="100%">
           <div class="one" style="text-align:center;">
             <img src="images/labeltranslation.jpg" style="max-height: 200px;">
           </div>
         </tr>
-      </tr> -->
+      </tr>
+      <hr>      
+      <tr>
+        <tr valign="middle" width="100%">
+          <h4 style="font-weight: 500;">
+            AUGCAL: Sim-to-Real Adaptation by Improving Uncertainty Calibration on Augmented Synthetic Images
+          </h4>          
+          <p>
+            <a href="https://iclr.cc/Conferences/2024/Dates"><span style="color:#9A2617; font-weight:500">ICLR 2024</span>
+              <!-- <a href="https://uncv2023.github.io/"><span style="color:#9A2617; font-weight:500">Uncertainty Quantification for Computer Vision, ICCV 2023</span></a> -->
+         </p>          
+          <p class="authors">
+            Prithvijit Chattopadhyay, Bharat Goyal, Bogi Ecsedi, Viraj Prabhu, Judy Hoffman
+            <br />
+          </p>
+          </tr>
+          <tr width="100%">
+            <div class="one" style="text-align:center;">
+              <img src="images/augcal.jpg" style="max-height: 200px;">
+            </div>
+          </tr>
+      </tr>
+      <hr>
       <tr valign="middle" width="100%">
         <h4 style="font-weight: 500;">
           LANCE: Stress-testing Visual Models by Generating Language-guided Counterfactual Images
@@ -271,43 +316,6 @@ tags: about
             <img src="images/backbone.png" style="max-height: 200px;">
           </div>
         </tr>
-      </tr>
-      <hr>
-      <tr>
-        <tr valign="middle" width="100%">
-          <h4 style="font-weight: 500;">
-            Translating Labels to Solve Annotation Mismatches Across Object Detection Datasets
-          </h4>
-          <p class="authors">
-            Yuan-Hong Liao, David Acuna, Rafid Mahmood, James Lucas, Viraj Prabhu, Sanja Fidler
-            <br />
-          </p>
-        </tr>
-        <tr width="100%">
-          <div class="one" style="text-align:center;">
-            <img src="images/labeltranslation.jpg" style="max-height: 200px;">
-          </div>
-        </tr>
-      </tr>
-      <hr>
-      <tr>
-        <tr valign="middle" width="100%">
-          <h4 style="font-weight: 500;">
-            AUGCAL: Sim-to-Real Adaptation by Improving Uncertainty Calibration on Augmented Synthetic Images
-          </h4>          
-          <p>
-            <a href="https://uncv2023.github.io/"><span style="color:#9A2617; font-weight:500">Uncertainty Quantification for Computer Vision, ICCV 2023</span></a>
-         </p>          
-          <p class="authors">
-            Prithvijit Chattopadhyay, Bharat Goyal, Bogi Ecsedi, Viraj Prabhu, Judy Hoffman
-            <br />
-          </p>
-          </tr>
-          <tr width="100%">
-            <div class="one" style="text-align:center;">
-              <img src="images/augcal.jpg" style="max-height: 200px;">
-            </div>
-          </tr>
       </tr>
       <hr>
       <tr>
@@ -564,8 +572,8 @@ tags: about
           </h4>
           <p>
             <a href="https://www.mlforhc.org/2019-conference"><span style="color:#9A2617; font-weight:500">MLHC 2019
-                (spotlight)</span></a>, <a href="https://ml4health.github.io/2019/"><span
-                style="color:#9A2617; font-weight:500">Machine Learning for Health, NeurIPS 2018</span></a>
+                (spotlight)</span></a>
+                <!-- <a href="https://ml4health.github.io/2019/"><span style="color:#9A2617; font-weight:500">Machine Learning for Health, NeurIPS 2018</span></a> -->
           </p>
           <p class="authors">
             Viraj Prabhu, Anitha Kannan, Murali Ravuri, Manish Chablani, David Sontag, Xavier Amatriain
@@ -586,9 +594,8 @@ tags: about
             Do Explanations make VQA Models more Predictable to a Human?
           </h4>
           <p>
-            <a href="https://emnlp2018.org/"><span style="color:#9A2617; font-weight:500">EMNLP 2018</span></a>, <a
-              href="http://chalearnlap.cvc.uab.es/workshop/22/description/"><span
-                style="color:#9A2617; font-weight:500">Chalearn Looking at People, CVPR 2017</span></a>
+            <a href="https://emnlp2018.org/"><span style="color:#9A2617; font-weight:500">EMNLP 2018</span></a>
+            <!-- <a href="http://chalearnlap.cvc.uab.es/workshop/22/description/"><span style="color:#9A2617; font-weight:500">Chalearn Looking at People, CVPR 2017</span></a> -->
           </p>
           <p class="authors">
             Arjun Chandrasekaran*, Viraj Prabhu*, Deshraj Yadav*, Prithvijit Chattopadhyay*, Devi Parikh (* = equal contribution)<br />          
