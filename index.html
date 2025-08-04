@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viraj Prabhu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Lato', Roboto, sans-serif;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px;
+            background: #fff;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        .profile-image {
+            margin-top: auto;
+            width: 250px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .bio-content {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2.3em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            font-weight: 400;
+            margin: 40px 0 20px 0;
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 500;
+            margin: 25px 0 15px 0;
+            color: #34495e;
+        }
+
+        h4 {
+            font-size: 1.0em;
+            font-weight: 500;
+            margin: 10px 0 10px 0;
+            color: #34495e;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .affiliations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            padding: 20px;
+            /* background: #f8f9fa; */
+            border-radius: 8px;
+        }
+
+        .affiliation-item {
+            text-align: center;
+        }
+
+        .affiliation-item img {
+            height: 80px;
+            width: auto;
+            margin-bottom: 5px;
+        }
+
+        .affiliation-item span {
+            display: block;
+            font-size: 0.7em;
+            color: #666;
+        }
+
+        .tldr {
+            font-size: 0.9em;
+            /* font-style: italic; */
+            /* color: #666; */
+        }
+        .research-description {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+
+        .news-list li strong {
+            color: #2c3e50;
+        } */
+
+        /* Publications: single column, image alongside content */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .publication {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 10px;
+            /* border: 1px solid #eee; */
+            border-radius: 8px;
+            /* border-left: 4px solid #95a5a6; */
+            /* background: #fafafa; */
+            min-width: 0;
+            max-height: 250px
+        }
+
+        .publication-content {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        .publication h4 {
+            margin-bottom: 8px;
+            color: #3498db;;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .publication h4 a {
+            color: #3498db;;
+            text-decoration: none;
+        }
+
+        .publication h4 a:hover {
+            text-decoration: underline;
+        }
+        
+        
+        .publication .venue {
+            color: #9A2617;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .publication .authors {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .links {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 8px;
+        }
+        .publication .links {
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
+
+        .publication .links a {
+            display: inline-flex;
+            align-items: center;            
+            text-decoration: none;
+            color: #3498db;
+            /* font-size: 0.9em; */
+        }
+
+        .publication .links a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .publication .links svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            fill: currentColor;
+        }
+
+        .publication-image {
+            width: 350px;
+            margin: 30px;
+            max-height: 225px;
+            margin: 0;
+            border-radius: 6px;
+            flex-shrink: 0;
+            object-fit: contain;
+            background: #fff;
+            align-self: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 2px 4px 2px 0;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            text-decoration: none;
+        }
+
+        .project {
+            margin-bottom: 25px;
+            padding: 15px;
+            /* border-left: 3px solid #95a5a6; */
+        }
+
+        .project h4 {
+            margin-bottom: 8px;
+        }
+
+        .project-authors {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .toggle-content {
+            margin-top: 20px;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: #3498db;
+            cursor: pointer;
+            font-size: 1.0em;
+            text-decoration: underline;
+            padding: 0;
+        }
+
+        .toggle-btn:hover {
+            color: #2980b9;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .misc-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .misc-list li {
+            margin-bottom: 8px;
+            padding: 8px 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .misc-list li a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .misc-list li a:hover {
+            text-decoration: underline;
+        }
+
+        .misc-compact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .misc-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #ddd;
+        }
+
+        .misc-section h4 {
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+        }
+
+        .misc-section ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .misc-section li {
+            margin-bottom: 4px;
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+
+        .misc-section a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .misc-section a:hover {
+            text-decoration: underline;
+        }
+
+        .selected {
+            background: #ffffe0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .affiliations {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .publications-list {
+                gap: 15px;
+            }
+
+            .publication {
+                flex-direction: column;
+                align-items: stretch;
+                max-height: none;
+                padding: 15px;
+            }
+
+            .publication-image {
+                width: 100%;
+                max-width: 300px;
+                margin: 15px auto 0 auto;
+                align-self: center;
+            }
+
+            .publication .links {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .misc-compact {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .misc-section {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .affiliations {
+                grid-template-columns: 1fr;
+            }
+            
+            .publication {
+                padding: 10px;
+            }
+            
+            .publication-image {
+                width: 100%;
+                max-width: 250px;
+                margin: 10px auto 0 auto;
+            }
+
+            .publication .links a {
+                font-size: 0.85em;
+                padding: 2px 4px;
+            }
+        }
+
+        .publication h4 a:hover {
+            text-decoration: underline;
+        }
+
+        .publication .inline-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .publication .inline-links a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .publication .inline-links a:hover {
+            color: #3498db;
+        }
+
+        .publication .inline-links svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .publication .venue {
+            color: #9A2617;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-section">
+        <img src="images/dp.jpg" alt="Viraj Prabhu" class="profile-image">
+        <div class="bio-content">
+            <h1>Viraj Prabhu</h1>
+            <p>I am a research scientist on the multimodal AI team at <a href="https://www.salesforceairesearch.com/">Salesforce Research</a>. I received my PhD in Computer Science from Georgia Tech in December 2023, where I was advised by <a href="https://www.cc.gatech.edu/~judy/">Judy Hoffman</a> and worked on making computer vision models generalize to new environments. I earned my Master's in CS (awarded the <a href="https://www.cc.gatech.edu/content/annual-awards-and-honors-past-recipients">MS Research award</a>) in 2019, also at Georgia Tech, where I was advised by <a href="https://www.cc.gatech.edu/~parikh/">Devi Parikh</a> and worked on developing <a href="https://virajprabhu.github.io/qpremise/">visual</a> <a href="https://www.aclweb.org/anthology/D18-1128.pdf">conversational</a> <a href="https://arxiv.org/abs/1708.05122">agents</a>.</p>
+            
+            <p>In grad school, I've had the opportunity to intern at <a href="https://nv-tlabs.github.io/">NVIDIA</a> (with <a href="https://www.cs.utoronto.ca/~fidler/">Sanja Fidler</a>), Salesforce (with <a href="http://web.mit.edu/naik/www/">Nikhil Naik</a>), and <a href="https://www.curai.com/">Curai</a> (with <a href="https://scholar.google.com/citations?user=eoBHpj4AAAAJ&hl=en">Anitha Kannan</a>). Before that, I've had stints as a research assistant at Virginia Tech (with <a href="https://www.cc.gatech.edu/~dbatra/index.html">Dhruv Batra</a>) and <a href="https://www.adobe.com/in/">Adobe</a>, and as a mentor for <a href="http://cloudcv.org/">Google Summer of Code</a>. I received my Bachelor's degree in Computer Science from <a href="http://www.bits-pilani.ac.in/">BITS Pilani</a> in 2015.</p>
+            
+            <p>In my free time, I enjoy reading, running, soccer, and playing the guitar.</p>
+
+            <p style="text-align:center">
+                <a href="mailto:prabhuviraj@gmail.com">Email</a> &nbsp;/&nbsp;
+                <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
+                <!-- <a href="data/bio.txt">Bio</a> &nbsp;/&nbsp; -->
+                <a href="https://scholar.google.com/citations?user=1E7m_VsAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
+                <a href="https://linkedin.com/in/virprabh">LinkedIn</a> &nbsp;/&nbsp;
+                <a href="https://github.com/virajprabhu">Github</a>
+              </p>
+        </div>
+    </div>
+
+    <div class="affiliations">
+        <div class="affiliation-item">
+            <a href="http://www.bits-pilani.ac.in/"><img src="images/bits.png" alt="BITS Pilani"></a>
+            <span>2011-2015</span>
+        </div>
+        <div class="affiliation-item">
+            <a href="https://www.gatech.edu/"><img src="images/gt.jpg" alt="Georgia Tech"></a>
+            <span>2017-2023</span>
+        </div>
+        <div class="affiliation-item">
+            <a href="https://www.adobe.com/in/"><img src="images/adobe.png" alt="Adobe"></a>
+            <span>Summer 2014 <br/> 2015-2016</span>
+        </div>
+        <div class="affiliation-item">
+            <a href="http://curai.com/"><img src="images/curai.png" alt="Curai"></a>
+            <span>Summer 2018, 2019</span>
+        </div>
+        <div class="affiliation-item">
+            <a href="https://einstein.ai/"><img src="images/sf.png" alt="Salesforce"></a>
+            <span>Summer 2021 <br/>Jan 2024-current</span>
+        </div>
+        <div class="affiliation-item">
+            <a href="https://nv-tlabs.github.io/"><img src="images/nvidia.png" alt="NVIDIA"></a>
+            <span>Summer 2022</span>
+        </div>
+    </div>
+
+    <!-- <h2>News</h2>
+    <ul class="news-list">
+        <li><strong>[Oct '24]</strong> New preprints on training and evaluating multimodal foundation models out!</li>
+        <li><strong>[Jan '24]</strong> Defended my Ph.D. thesis and started a new role as a Research Scientist at Salesforce AI!</li>
+        <li><strong>[Aug '23-Mar '24]</strong> Invited talks on <a href="https://www.youtube.com/watch?v=jCedCS1mTYg">"Reliable Computer Vision"</a> at Caltech, AWS Responsible AI, UC Berkeley, and CMU.</li>
+    </ul> -->
+
+    <!-- <div class="toggle-content">
+        <button class="toggle-btn" onclick="toggleNews()">Read More</button>
+        <ul class="news-list hidden" id="more-news">
+            <li><strong>[Jun '22]</strong> Gave a tutorial on <a href="https://human-centeredai.github.io/">Human-Centered AI for Computer Vision</a> at CVPR 2022.</li>
+            <li><strong>[May '22]</strong> Co-organizing <a href="https://l2id.github.io/l2id2022/">Learning from Limited and Imperfect Data</a> at ECCV 2022.</li>
+            <li><strong>[Oct '21]</strong> Recognized as an outstanding reviewer at <a href="https://nips.cc/Conferences/2021/ProgramCommittee">NeurIPS 2021</a> and <a href="http://cvpr2021.thecvf.com/node/184">CVPR 2021</a>.</li>
+            <li><strong>[Jan '21]</strong> Head TA for <a href='https://sites.google.com/view/cs4476-sp21'>Intro to Computer Vision</a>, Spring 2021.</li>
+            <li><strong>[May '19]</strong> Completed my Master's degree!</li>
+            <li><strong>[Mar '19]</strong> Awarded the College of Computing's <a href="https://www.cc.gatech.edu/content/annual-awards-and-honors-past-recipients">MS Research award</a> (1 student annually).</li>
+        </ul>
+    </div> -->
+
+    <h2>Research</h2>     
+    <div class="research-description">My current research focus is on developing multimodal digital agents that can perceive, reason, and act in novel environments to accomplish complex goals. I'm particularly excited about LLM-modulo approaches that enhance and robustify LLMs using structured outputs and external verifiers. Representative publications are <span style="background-color: #ffffe0;">highlighted</span>.</div>
+
+    <div class="publications-list">
+        <div class="publication selected">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://arxiv.org/abs/2410.13121">Trust but Verify: Programmatic VLM Evaluation in the Wild</a>
+                </h4>
+                <div class="authors">Viraj Prabhu, Senthil Purushwalkam, An Yan, Caiming Xiong, Ran Xu</div>
+                <div class="venue">ICCV 2025</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2410.13121">[Paper]</a>
+                    <a href="https://huggingface.co/datasets/Salesforce/PROVE">[Data]</a>
+                    <a href="https://huggingface.co/datasets/Salesforce/PROVE">[Explorer]</a>
+                </div>
+                <!-- <div class="tldr">VLM eval benchmark w/ </div> -->
+            </div>
+            <img src="images/prove.jpg" alt="PROVE" class="publication-image">
+        </div>
+
+        <div class="publication selected">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://www.salesforceairesearch.com/opensource/xGen-MM/index.html">xGen-MM (BLIP-3): A Family of Open Large Multimodal Models</a>
+                </h4>
+                <div class="authors">Salesforce AI Research (Viraj Prabhu: core contributor)</div>
+                <div class="venue">ICCV 2025 Findings Workshop</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2408.08872">[Paper]</a>
+                    <a href="https://www.salesforceairesearch.com/opensource/xGen-MM/index.html">[Project]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/blip3.png" alt="BLIP-3" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://openreview.net/forum?id=10R6iX6JHm">We're Not Using Videos Effectively: An Updated Video Domain Adaptation Baseline</a>
+                </h4>
+                <div class="authors">Simar Kareer, Vivek Vijaykumar, Harsh Maheshwari, Judy Hoffman, Prithvijit Chattopadhyay, Viraj Prabhu</div>
+                <div class="venue">TMLR 2024</div>
+                <div class="links">
+                    <a href="https://openreview.net/forum?id=10R6iX6JHm">[Paper]</a>
+                    <a href="https://github.com/SimarKareer/UnifiedVideoDA">[Code]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/vda.png" alt="Video Domain Adaptation" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://openreview.net/forum?id=ChHx5ORqF0">Translating Labels to Solve Annotation Mismatches Across Object Detection Datasets</a>
+                </h4>
+                <div class="authors">Yuan-Hong Liao, David Acuna, Rafid Mahmood, James Lucas, Viraj Prabhu, Sanja Fidler</div>
+                <div class="venue">ICLR 2024</div>
+                <div class="links">
+                    <a href="https://openreview.net/forum?id=ChHx5ORqF0">[Paper]</a>                    
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/labeltranslation.jpg" alt="Translating Labels" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://openreview.net/forum?id=WNQjN5HzXt">AUGCAL: Sim-to-Real Adaptation by Improving Uncertainty Calibration on Augmented Synthetic Images</a>
+                </h4>
+                <div class="authors">Prithvijit Chattopadhyay, Bharat Goyal, Bogi Ecsedi, Viraj Prabhu, Judy Hoffman</div>
+                <div class="venue">ICLR 2024</div>
+                <div class="links">
+                    <a href="https://openreview.net/forum?id=WNQjN5HzXt">[Paper]</a>
+                    <a href="https://arxiv.org/abs/2312.06106">[arXiv]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/augcal.jpg" alt="AUGCAL" class="publication-image">
+        </div>
+
+        <div class="publication selected">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://virajprabhu.github.io/lance-web/">LANCE: Stress-testing Visual Models by Generating Language-guided Counterfactual Images</a>
+                </h4>
+                <div class="authors">Viraj Prabhu, Sriram Yenamandra, Prithvijit Chattopadhyay, Judy Hoffman</div>
+                <div class="venue">NeurIPS 2023</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2305.19164">[Paper]</a>
+                    <a href="https://github.com/virajprabhu/LANCE">[Code]</a>
+                    <a href="https://virajprabhu.github.io/lance-web/">[Project]</a>
+                    <a href="https://ic.gatech.edu/external-news/stress-test-method-detects-when-object-recognition-models-are-using-shortcuts">[News]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/LanceTeaserWeb.png" alt="LANCE" class="publication-image">
+        </div>
+
+        <div class="publication selected">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://openreview.net/forum?id=lAQQx7hlku">Bridging the Sim2Real gap with CARE: Supervised Detection Adaptation with Conditional Alignment and Reweighting</a>
+                </h4>
+                <div class="authors">Viraj Prabhu, David Acuna, Yuan-Hong Liao, Rafid Mahmood, Marc T. Law, Judy Hoffman, Sanja Fidler, James Lucas</div>
+                <div class="venue">TMLR 2023</div>
+                <div class="links">
+                    <a href="https://openreview.net/forum?id=lAQQx7hlku">[Paper]</a>
+                    <a href="https://arxiv.org/abs/2302.04832">[arXiv]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/care.jpg" alt="CARE" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://t.co/rmdIBNbDAx">Battle of the Backbones: A Large-Scale Comparison of Pretrained Models across Vision Tasks</a>
+                </h4>
+                <div class="authors">Micah Goldblum, Hossein Souri, Renkun Ni, Manli Shu, Viraj Prabhu, Gowthami Somepalli, Prithvijit Chattopadhyay, Adrien Bardes, Mark Ibrahim, Judy Hoffman, Rama Chellappa, Andrew Gordon Wilson, Tom Goldstein</div>
+                <div class="venue">NeurIPS Datasets & Benchmarks 2023 </div>
+                <div class="links">
+                    <a href="https://t.co/rmdIBNbDAx">[Paper]</a>
+                    <a href="https://github.com/hsouri/Battle-of-the-Backbones">[Code]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/backbone.png" alt="Battle of Backbones" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Yenamandra_FACTS_First_Amplify_Correlations_and_Then_Slice_to_Discover_Bias_ICCV_2023_paper.pdf">FACTS: First Amplify Correlations and Then Slice to Discover Bias</a>
+                </h4>
+                <div class="authors">Sriram Yenamandra, Pratik Ramesh, Viraj Prabhu, Judy Hoffman</div>
+                <div class="venue">ICCV 2023</div>
+                <div class="links">
+                    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Yenamandra_FACTS_First_Amplify_Correlations_and_Then_Slice_to_Discover_Bias_ICCV_2023_paper.pdf">[Paper]</a>
+                    <a href="https://arxiv.org/abs/2309.17430">[arXiv]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/facts.jpg" alt="FACTS" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://arxiv.org/abs/2306.04482">ICON<sup>2</sup>: Reliably Benchmarking Inequity in Detection by Identifying and Controlling for Confounders</a>
+                </h4>
+                <div class="authors">Sruthi Sudhakar, Viraj Prabhu, Olga Russakovsky, Judy Hoffman</div>
+                <div class="venue">CVPR Workshop 2023</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2306.04482">[Paper]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/icon2.jpeg" alt="ICON2" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2022W/L3D-IVU/papers/Prabhu_Can_Domain_Adaptation_Make_Object_Recognition_Work_for_Everyone_CVPRW_2022_paper.pdf">Can domain adaptation make object recognition work for everyone?</a>
+                </h4>
+                <div class="authors">Viraj Prabhu, Ramprasaath R. Selvaraju, Judy Hoffman, Nikhil Naik</div>
+                <div class="venue">CVPR Workshop 2022</div>
+                <div class="links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2022W/L3D-IVU/papers/Prabhu_Can_Domain_Adaptation_Make_Object_Recognition_Work_for_Everyone_CVPRW_2022_paper.pdf">[Paper]</a>
+                    <a href="https://github.com/virajprabhu/inclusive_da">[Code]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/teaser_ida.png" alt="Domain Adaptation for Everyone" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://www.bmvc2021-virtualconference.com/assets/papers/0282.pdf">Mitigating Bias in Visual Transformers via Targeted Alignment</a>
+                </h4>
+                <div class="authors">Sruthi Sudhakar, Viraj Prabhu, Arvind Krishnakumar, Judy Hoffman</div>
+                <div class="venue">BMVC 2021</div>
+                <div class="links">
+                    <a href="https://www.bmvc2021-virtualconference.com/assets/papers/0282.pdf">[Paper]</a>
+                    <a href="https://arxiv.org/abs/2302.04358">[arXiv]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/2021BMVCTadet.jpeg" alt="ViT Bias Mitigation" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://openreview.net/pdf?id=OjS3nkNATOw">Adapting Self-Supervised Vision Transformers by Probing Attention-Conditioned Masking Consistency</a>
+                </h4>
+                <div class="authors">Viraj Prabhu*, Sriram Yenamandra*, Aaditya Singh, Judy Hoffman (* = equal contribution)</div>
+                <div class="venue">NeurIPS 2022</div>
+                <div class="links">
+                    <a href="https://openreview.net/pdf?id=OjS3nkNATOw">[Paper]</a>
+                    <a href="https://arxiv.org/abs/2206.08222">[arXiv]</a>
+                    <a href="https://www.cc.gatech.edu/news/new-system-image-object-recognition-modernizes-how-computers-learn-independently-and-transfer">[News]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/approach_pacmac.jpg" alt="PACMAC" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://arxiv.org/abs/2107.10140">AUGCO: Augmentation Consistency-guided Self-training for Source-free Domain Adaptive Segmentation</a>
+                </h4>
+                <div class="authors">Viraj Prabhu*, Shivam Khare*, Deeksha Kartik, Judy Hoffman (* = equal contribution)</div>
+                <div class="venue">ECCV Workshop 2022</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2107.10140">[Paper]</a>
+                    <a href="https://drive.google.com/file/d/1gTS-rfA-ArKCI4DyfL45IsjPF2ViV5uE/view">[Talk]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/augco.png" alt="AUGCO" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://www.bmvc2021-virtualconference.com/assets/papers/0362.pdf">UDIS: Unsupervised Discovery of Bias in Deep Visual Recognition Models</a>
+                </h4>
+                <div class="authors">Arvind Krishnakumar, Viraj Prabhu, Sruthi Sudhakar, Judy Hoffman</div>
+                <div class="venue">BMVC 2021</div>
+                <div class="links">
+                    <a href="https://www.bmvc2021-virtualconference.com/assets/papers/0362.pdf">[Paper]</a>
+                    <a href="https://arxiv.org/abs/2110.15499">[arXiv]</a>
+                    <a href="https://github.com/akrishna77/bias-discovery">[Code]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/2021BMVC_UDIS.png" alt="UDIS" class="publication-image">
+        </div>
+
+        <div class="publication selected">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://virajprabhu.github.io/sentry-web/">Selective Entropy Optimization via Committee Consistency for Unsupervised Domain Adaptation</a>
+                </h4>
+                <div class="authors">Viraj Prabhu, Shivam Khare, Deeksha Kartik, Judy Hoffman</div>
+                <div class="venue">ICCV 2021</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2012.11460">[Paper]</a>
+                    <a href="https://github.com/virajprabhu/SENTRY">[Code]</a>
+                    <a href="https://www.youtube.com/watch?v=sxxSGExAStY">[Video]</a>
+                    <a href="https://virajprabhu.github.io/sentry-web/">[Webpage]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/teaser_sentry.png" alt="SENTRY" class="publication-image">
+        </div>
+
+        <div class="publication selected">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://virajprabhu.github.io/adaclue-web/">Active Domain Adaptation via Clustering Uncertainty-weighted Embeddings</a>
+                </h4>
+                <div class="authors">Viraj Prabhu, Arjun Chandrasekaran, Kate Saenko, Judy Hoffman</div>
+                <div class="venue">ICCV 2021</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2010.08666">[Paper]</a>
+                    <a href="https://github.com/virajprabhu/clue">[Code]</a>
+                    <a href="https://virajprabhu.github.io/adaclue-web/">[Project]</a>
+                    <a href="https://www.youtube.com/watch?v=VGSiORxS7BY">[Video]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/teaser_toy.jpg" alt="CLUE" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4><a href="https://arxiv.org/abs/1910.02830">Open Set Medical Diagnosis</a></h4>
+                <div class="authors">Viraj Prabhu, Anitha Kannan, Geoffrey J. Tso, Namit Katariya, Manish Chablani, David Sontag, Xavier Amatriain</div>
+                <div class="venue">NeurIPS Workshop 2019</div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/osd.png" alt="Open Set Medical" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4><a href="https://arxiv.org/abs/1811.03066">Few-shot Learning for Dermatological Disease Diagnosis</a></h4>
+                <div class="authors">Viraj Prabhu, Anitha Kannan, Murali Ravuri, Manish Chablani, David Sontag, Xavier Amatriain</div>
+                <div class="venue">MLHC 2019 (spotlight)</div>
+                <div class="links">
+                    <a href="https://proceedings.mlr.press/v106/prabhu19a.html">[Paper]</a>
+                    <a href="https://arxiv.org/abs/1811.03066">[arXiv]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/pcn.jpg" alt="Few-shot Dermatology" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://www.aclweb.org/anthology/D18-1128.pdf">Do Explanations make VQA Models more Predictable to a Human?</a>
+                </h4>
+                <div class="authors">Arjun Chandrasekaran*, Viraj Prabhu*, Deshraj Yadav*, Prithvijit Chattopadhyay*, Devi Parikh (* = equal contribution)</div>
+                <div class="venue">EMNLP 2018</div>
+                <div class="links">
+                    <a href="https://www.aclweb.org/anthology/D18-1128.pdf">[Paper]</a>
+                    <a href="https://arxiv.org/abs/1810.12366">[arXiv]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/predictable.png" alt="VQA Predictability" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://virajprabhu.github.io/qpremise/dataset/">The Promise of Premise: Harnessing Question Premises in Visual Question Answering</a>
+                </h4>
+                <div class="authors">Aroma Mahendru*, Viraj Prabhu*, Akrit Mohapatra*, Dhruv Batra, Stefan Lee (* = equal contribution)</div>
+                <div class="venue">EMNLP 2017</div>
+                <div class="links">
+                    <a href="https://virajprabhu.github.io/qpremise/dataset/">[Project]</a>
+                    <a href="https://arxiv.org/abs/1705.00601">[arXiv]</a>
+                    <a href="https://bitbucket.org/akrit_vt/premise_emnlp17">[Code]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/premise.jpg" alt="Premise" class="publication-image">
+        </div>
+
+        <div class="publication">
+            <div class="publication-content">
+                <h4>
+                    <a href="https://arxiv.org/abs/1708.05122">Evaluating Visual Conversational Agents via Cooperative Human-AI Games</a>
+                </h4>
+                <div class="authors">Prithvijit Chattopadhyay*, Deshraj Yadav*, Viraj Prabhu, Arjun Chandrasekaran, Abhishek Das, Stefan Lee, Dhruv Batra, Devi Parikh (* = equal contribution)</div>
+                <div class="venue">HCOMP 2017</div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/1708.05122">[Paper]</a>
+                    <a href="https://github.com/GT-Vision-Lab/GuessWhich">[Code]</a>
+                </div>
+                <!-- <div class="tldr">trust but verify</div> -->
+            </div>
+            <img src="images/hcomp.jpg" alt="Visual Conversational Agents" class="publication-image">
+        </div>
+    </div>
+
+    <h2>Miscellaneous</h2>
+    
+    <div class="misc-compact">
+        <div class="misc-section">
+            <h4><b>Service & Recognition</b></h4>
+            <ul>
+                <li><b>Reviewer</b>: CVPR, NeurIPS, ICCV, ECCV, ICLR, TMLR, WACV, ACL (outstanding reviewer at <a href="https://nips.cc/Conferences/2021/ProgramCommittee">NeurIPS 2021</a>, <a href="http://cvpr2021.thecvf.com/node/184">CVPR 2021</a>)</li>
+                <li><b>Workshop organizer</b>: <a href="https://l2id.github.io/l2id2022/">EMACS (CVPR '25)</a>, <a href="https://sites.google.com/view/l2id2023">L2ID (ECCV '22)</a></li>                
+                <li><b>Teaching Assistant</b>: for <a href="https://sites.google.com/view/cs4476-sp21">Computer Vision (Spring '21)</a>, Deep Learning (Fall '19), Machine Learning (Fall 17')</li>
+            </ul>
+        </div>
+
+        <div class="misc-section">
+            <h4><b>Talks & Media</b></h4>
+            <ul>
+                <li><b>Invited talks:</b> <a href="https://www.youtube.com/watch?v=jCedCS1mTYg">Towards Reliable Computer Vision</a>, at Caltech, AWS, UC Berkeley, CMU (2023-2024)</li>
+                <li><b>Speaker: </b><a href="https://www.youtube.com/watch?v=PBzF5f9hQaU">Human-Centered AI Tutorial</a> (CVPR 2022)</li>
+                <li><b>News coverage:</b> <a href="https://www.cc.gatech.edu/news/new-system-image-object-recognition-modernizes-how-computers-learn-independently-and-transfer">PACMAC</a> & <a href="https://ic.gatech.edu/external-news/stress-test-method-detects-when-object-recognition-models-are-using-shortcuts">LANCE</a> (GT News)</li>
+            </ul>
+        </div>
+
+        <div class="misc-section">
+            <h4><b>Projects & Software</b></h4>
+            <ul>
+                <li><a href="https://www.salesforce.com/blog/agentic-ai-for-flow/">Agentic AI for Flow</a>: Salesforce blog</li>
+                <li><a href="https://arxiv.org/abs/1810.11649">Fabrik</a>: Neural network IDE (<a href="https://github.com/Cloud-CV/Fabrik">code</a>)</li>
+                <li><a href="https://www.youtube.com/watch?v=wM9mpFxaOpM">KeyframeCut</a>: Adobe video segmentation tool</li>
+                <li><a href="https://github.com/batra-mlp-lab/visdial-rl">Visual Dialog RL</a>: PyTorch implementation</li>                
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
